@@ -49,7 +49,7 @@ export const LoginForm = () => {
     setSuccess("");
 
     startTransition(() => {
-      login(values, callbackUrl)
+      login(values, callbackUrl ?? '')
         .then((data) => {
           if (data?.error) {
             form.reset();
